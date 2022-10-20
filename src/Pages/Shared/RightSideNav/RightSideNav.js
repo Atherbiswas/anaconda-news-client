@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { FaGoogle, FaGithub, FaDiscord, FaFacebook, FaYoutube, FaWhatsapp, FaTwitter} from "react-icons/fa";
+import BrandCoursel from '../BrandCarousel/BrandCoursel';
 
 const RightSideNav = () => {
     return (
@@ -22,6 +23,9 @@ const RightSideNav = () => {
                     <ListGroup.Item className="mb-3 border border-0 shadow">Privacy Policy</ListGroup.Item>
                     <ListGroup.Item className="mb-3 border border-0 shadow">Terms & Condition</ListGroup.Item>
                 </ListGroup>
+            </div>
+            <div>
+                <BrandCoursel></BrandCoursel>
             </div>
         </div>
     );
