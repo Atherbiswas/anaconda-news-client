@@ -19,7 +19,7 @@ const Header = () => {
             <Nav.Link href="#AboutUs">About Us</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link href="#deets">+Advertisement</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               <FaUserCircle></FaUserCircle>
             </Nav.Link>
