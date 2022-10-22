@@ -10,42 +10,51 @@ import Register from "../../Pages/Register/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main></Main>,
-        children: [
-            {
-                path: '/',
-                loader: () => fetch('http://localhost:5000/news'),
-                element: <Home></Home>
-            },
-            {
-                path: '/category/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`),
-                element: <Category></Category>
-            },
-            {
-                path: 'news/:id',
-                loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`),
-                element: <PrivateRoute><News></News></PrivateRoute>
-            },
-            {
-                path: '/login',
-                element: <Login></Login>
-            },
-            {
-                path: '/register',
-                element: <Register></Register>
-            },
-            {
-                path: '/terms&condition',
-                element: <TermsAndCondition></TermsAndCondition>
-
-            },
-            {
-                path: '/profile',
-                element: <PrivateRoute><Profile></Profile></PrivateRoute>
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        loader: () => fetch("https://anaconda-news-sever.vercel.app/news"),
+        element: <Home></Home>,
+      },
+      {
+        path: "/category/:id",
+        loader: ({ params }) =>
+          fetch(`https://anaconda-news-sever.vercel.app/category/${params.id}`),
+        element: <Category></Category>,
+      },
+      {
+        path: "news/:id",
+        loader: ({ params }) =>
+          fetch(`https://anaconda-news-sever.vercel.app/news/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <News></News>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/terms&condition",
+        element: <TermsAndCondition></TermsAndCondition>,
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
+]);
