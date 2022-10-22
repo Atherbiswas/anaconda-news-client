@@ -55,7 +55,7 @@ const Header = () => {
                 roundedCircle
                 src={user?.photoURL}
                 ></Image> :
-              <FaUserCircle></FaUserCircle>
+              <FaUserCircle className='fs-2'></FaUserCircle>
               }
             </Nav.Link>
           </Nav>
