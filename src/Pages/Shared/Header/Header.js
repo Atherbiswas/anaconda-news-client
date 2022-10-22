@@ -39,7 +39,7 @@ const Header = () => {
                 </>
                 :
                 <>
-                  <Link to='/login'><Button variant="info me-2">Login</Button></Link>
+                  <Link to='/login'><Button variant="primary me-2">Login</Button></Link>
                   <Link to='/register'><Button variant="primary">Register</Button></Link>
                 </>
               }
